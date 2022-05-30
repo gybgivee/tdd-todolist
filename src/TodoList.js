@@ -9,24 +9,21 @@ class TodoList {
 
         if (this.isEmptyObject(myNewToDo)) {
             lastIndex = 0;
-            Object.assign(myNewToDo.push({
+            myNewToDo.push({
                 id: 1,
                 text: myList,
                 status: 'incomplete'
             })
-            );
-
         } else {
             console.log(myNewToDo.length);
             lastIndex = Object.keys(myNewToDo).length;
             console.log('lastIndex ' + lastIndex);
-            Object.assign(myNewToDo.push(
+            myNewToDo.push(
                 {
                     id: lastIndex + 1,
                     text: myList,
                     status: 'incomplete'
-                }));
-
+                })
         }
         return myNewToDo
 
@@ -64,10 +61,10 @@ class TodoList {
     }
 
     isEmptyObject(object) {
-
         return Object.keys(object).length === 0;
     }
 }
+/*
 const myToDoList = new TodoList();
 myToDoList.create('Hello')
 myToDoList.create('OK');
@@ -75,7 +72,7 @@ myToDoList.create('Ola');
 
 console.log('myToDoList', myToDoList);
 myToDoList.setComplete(1);
-myToDoList.removeById(3);
+myToDoList.removeById(3);*/
 
 
 module.exports = TodoList
