@@ -1,5 +1,5 @@
 const TodoList = require("../src/TodoList.js")
-//let todoList = new TodoList();
+
 describe("TodoList", () => {
 
   it("creates a todo item", () => {
